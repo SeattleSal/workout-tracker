@@ -15,6 +15,7 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/populate", { us
 
 // Routes
 app.use(require("./routes/htmlRoutes"));
+app.use(require("./routes/apiRoutes"))
 
 // Listen on port
 app.listen(PORT, () => {
