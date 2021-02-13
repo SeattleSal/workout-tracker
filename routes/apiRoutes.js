@@ -26,5 +26,26 @@ router.post("/api/workouts", (req, res) => {
     });
 });
 
+// PUT - add exercise to workout
+router.put("/api/workouts/:id", (req, res) =>{
+    console.log(req.params.id)
+    console.log(req.body)
+    Workout.findByIdAndUpdate(
+        req.params.id,
+        {
+            $push: {
+                exercises: req.body
+            }
+        },
+        { new: true, runValidators: true }
+    )
+    .then(dbWorkout => {
+        res.json(dbWorkout);
+    })
+    .catch(err => {
+        res.json(err);
+    });
+});
+
 
 module.exports = router;
