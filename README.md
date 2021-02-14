@@ -54,7 +54,7 @@ The application displays a homepage with information about the last workout. The
 
 See Screenshots:<br>
 Home Page: <br>
-![Home Page](./assets/home.jpg)<br>
+![Home Page](./assets/home.JPG)<br>
 Add Workout and Exercises: <br>
 ![Workout](./assets/workout.JPG)<br>
 View Stats: <br>
