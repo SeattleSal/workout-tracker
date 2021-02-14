@@ -7,15 +7,15 @@
 * [User Story](#User_Story)
 * [Acceptance Criteria](#Acceptance_Criteria)
 * [Dependencies](#Dependencies)
-* [Usage] (#usage)
+* [Usage](#usage)
 * [License](#license)
 
 ## Description
-This application is a workout tracker. The front end code `Develop` folder was provided.
+This application is a workout tracker for users to create and track their exercises. The front end code `Develop` folder was provided and I created the models, routes and server.js.
 
 ## Links
-* Live Website: 
-* Github Link: https://github.com/SeattleSal/workout-tracker
+* Live Website: https://seattlesal-fitness-tracker.herokuapp.com/
+* Github Link: https://github.com/SeattleSal/workout-tracker/
 
 ## User_Story
 * As a user, I want to be able to view create and track daily workouts. I want to be able to log multiple exercises in a workout on a given day. I should also be able to track the name, type, weight, sets, reps, and duration of exercise. If the exercise is a cardio exercise, I should be able to track my distance traveled.
@@ -36,6 +36,7 @@ The dependencies are:
 * [express](http://expressjs.com/) for the web framework
 * [mongoose](https://www.npmjs.com/package/mongoose) for the Object Modeling tool for use with MongoDB.
 * [morgan](https://www.npmjs.com/package/morgan) for the middleware. 
+
 There is a `package.json` included, the following commands should be run to install dependencies:
 
 ```bash
@@ -49,15 +50,15 @@ Use the links above to use the application live. If you prefer to run the applic
 node server.js
 ```
 
-The application displays a ...
+The application displays a homepage with information about the last workout. The user can add exercises to the last workout or create a new workout. When the user creates a new workout they can choose to add Cardio (Name, Distance, Duration) or Resistance (Name, Weight, Sets, Reps, Duration) exercises. The user can also see statistics of their last 7 workouts in the dashboard.
 
 See Screenshots:<br>
 Home Page: <br>
-![Home Page](./assets/img/screenshot1.JPG)
+![Home Page](./assets/home.jpg)<br>
 Add Workout and Exercises: <br>
-![Workout](./assets/img/screenshot2.JPG)
+![Workout](./assets/workout.JPG)<br>
 View Stats: <br>
-![Stats](./assets/img/screenshot2.JPG)
+![Dashboard](./assets/stats.JPG)
 
 ## License
 
