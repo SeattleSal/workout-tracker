@@ -1,4 +1,4 @@
-// apiRoutes
+// apiRoutes - to be called from js files in public folder
 
 const router = require("express").Router();
 const Workout = require("../models/Workout");
@@ -11,7 +11,7 @@ router.get("/api/workouts", (req, res) => {
         res.json(dbWorkouts);
     })
     .catch(err => {
-        res.json(err);
+      res.status(400).json(err);
     })
 });
 
@@ -22,7 +22,7 @@ router.get("/api/workouts/range", (req, res) => {
         res.json(dbWorkouts);
     })
     .catch(err => {
-        res.json(err);
+      res.status(400).json(err);
     });
 });
 
@@ -33,14 +33,12 @@ router.post("/api/workouts", (req, res) => {
         res.json(dbWorkout);
     })
     .catch(err => {
-        res.json(err);
+      res.status(400).json(err);
     });
 });
 
 // PUT - add exercise to workout
 router.put("/api/workouts/:id", (req, res) =>{
-    console.log(req.params.id)
-    console.log(req.body)
     Workout.findByIdAndUpdate(
         req.params.id,
         {
@@ -54,9 +52,8 @@ router.put("/api/workouts/:id", (req, res) =>{
         res.json(dbWorkout);
     })
     .catch(err => {
-        res.json(err);
+        res.status(400).json(err);
     });
 });
-
 
 module.exports = router;

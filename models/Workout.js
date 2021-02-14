@@ -1,4 +1,5 @@
-// Workout
+// Workout Model
+// type, name and duration are required for both cardio and resistance
 
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
